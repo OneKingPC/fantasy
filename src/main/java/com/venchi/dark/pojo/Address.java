@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/07/07
  */
 @Data

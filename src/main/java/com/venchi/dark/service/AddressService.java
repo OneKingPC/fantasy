@@ -3,7 +3,7 @@ package com.venchi.dark.service;
 import com.venchi.dark.pojo.Address;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/07/07
  */
 public interface AddressService {

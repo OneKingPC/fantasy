@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/07/07
  */
 @Configuration

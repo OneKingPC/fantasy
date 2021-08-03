@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/08/02
  */
 @Mapper

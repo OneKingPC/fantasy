@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/06/30
  */
 @ApiModel(value = "接口测试请求")

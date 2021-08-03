@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/06/30
  */
 @Api(value = "api测试")

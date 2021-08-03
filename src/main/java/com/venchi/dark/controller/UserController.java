@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/08/02
  */
 @RestController

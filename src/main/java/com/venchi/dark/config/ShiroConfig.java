@@ -1,7 +1,7 @@
 package com.venchi.dark.config;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/08/02
  */
 public class ShiroConfig {

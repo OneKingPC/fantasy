@@ -3,7 +3,7 @@ package com.venchi.dark.service;
 import com.venchi.dark.pojo.UserAuth;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/08/02
  */
 public interface UserAuthService {

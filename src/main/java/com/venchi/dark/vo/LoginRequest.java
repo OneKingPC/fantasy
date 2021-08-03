@@ -3,7 +3,7 @@ package com.venchi.dark.vo;
 import lombok.Data;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/08/02
  */
 @Data

@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/07/07
  */
 @Mapper

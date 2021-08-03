@@ -3,7 +3,7 @@ package com.venchi.dark.pojo;
 import lombok.Data;
 
 /**
- * @author liwc@tongtech.com
+ * @author liwc
  * @date 2021/07/30
  * 用户认证信息
  */
