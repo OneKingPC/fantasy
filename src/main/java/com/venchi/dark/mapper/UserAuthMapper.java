@@ -1,10 +1,7 @@
 package com.venchi.dark.mapper;
 
 import com.venchi.dark.pojo.UserAuth;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 /**
  * @author liwc
@@ -18,7 +15,7 @@ public interface UserAuthMapper {
      * @param username
      * @return
      */
-    @Select("select * from user_auth where username=${username}")
-    public UserAuth findByUsername(String username);
+    @Select("select * from user_auth where username=#{username}")
+    public UserAuth findByUsername(@Param("username") String username);
 
 }

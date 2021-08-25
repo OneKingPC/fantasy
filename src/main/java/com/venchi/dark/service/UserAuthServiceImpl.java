@@ -1,5 +1,6 @@
 package com.venchi.dark.service;
 
+import com.venchi.dark.mapper.UserAuthMapper;
 import com.venchi.dark.pojo.UserAuth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,11 +13,11 @@ import org.springframework.stereotype.Service;
 public class UserAuthServiceImpl implements UserAuthService {
 
     @Autowired
-    private UserAuthService userAuthService;
+    private UserAuthMapper userAuthMapper;
 
     @Override
     public UserAuth findByUsername(String username) {
-        return userAuthService.findByUsername(username);
+        return userAuthMapper.findByUsername(username);
     }
 
 }

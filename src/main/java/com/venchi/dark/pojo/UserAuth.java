@@ -2,6 +2,8 @@ package com.venchi.dark.pojo;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @author liwc
  * @date 2021/07/30
@@ -29,5 +31,7 @@ public class UserAuth {
      * 密码
      */
     private String password;
+
+    private List<Role> roleList;
 
 }

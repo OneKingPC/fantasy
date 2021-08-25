@@ -9,10 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -41,6 +38,17 @@ public class UserController {
     @ApiOperation(value = "用户登录")
     @PostMapping(value = "login")
     public CommonResult login(@RequestBody LoginRequest loginRequest){
+        CommonResult result = new CommonResult();
+        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(loginRequest.getUsername(),loginRequest.getPassword());
+        SecurityUtils.getSubject().login(usernamePasswordToken);
+        result.setCode(ResultCode.SUCCESS);
+        result.setMessage("登录成功");
+        return result;
+    }
+
+    @ApiOperation(value = "用户登录")
+    @GetMapping(value = "login_index")
+    public CommonResult login_index(@RequestBody LoginRequest loginRequest){
         CommonResult result = new CommonResult();
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(loginRequest.getUsername(),loginRequest.getPassword());
         SecurityUtils.getSubject().login(usernamePasswordToken);
