@@ -30,6 +30,12 @@ public class ShiroConfig {
         return securityManager;
     }
 
+    /**
+     * anon:例子/admins/**=anon 没有参数，表示可以匿名使用。
+     * authc:例如/admins/user/**=authc没有参数，表示需要认证(登录)才能使用
+     * @param securityManager
+     * @return
+     */
     @Bean
     public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager){
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
@@ -37,6 +43,7 @@ public class ShiroConfig {
         Map<String,String> filterMap = new HashMap<>();
         filterMap.put("/user/logout","logout");
         filterMap.put("/**", "authc");
+        filterMap.put("/druid/**", "anon");
         shiroFilterFactoryBean.setLoginUrl("/user/login");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
         return shiroFilterFactoryBean;

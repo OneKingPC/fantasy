@@ -15,7 +15,7 @@ public interface UserAuthMapper {
      * @param username
      * @return
      */
-    @Select("select * from user_auth where username=#{username}")
+    @Select("select id,username,password,user_id as userId from user_auth where username=#{username}")
     public UserAuth findByUsername(@Param("username") String username);
 
 }

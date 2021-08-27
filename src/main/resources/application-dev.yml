@@ -17,3 +17,14 @@ spring:
       filters: stat,wall,logback
       use-global-data-source-stat: true
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  redis:
+    database: 0
+    host: 192.168.80.142
+    port: 15600
+    password: Tong#1234
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+    connect-timeout: 1000

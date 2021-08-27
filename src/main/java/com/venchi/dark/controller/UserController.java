@@ -2,6 +2,7 @@ package com.venchi.dark.controller;
 
 import com.venchi.dark.common.CommonResult;
 import com.venchi.dark.common.ResultCode;
+import com.venchi.dark.common.ResultEnum;
 import com.venchi.dark.pojo.UserProfile;
 import com.venchi.dark.service.UserProfileService;
 import com.venchi.dark.vo.LoginRequest;
@@ -41,7 +42,7 @@ public class UserController {
         CommonResult result = new CommonResult();
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(loginRequest.getUsername(),loginRequest.getPassword());
         SecurityUtils.getSubject().login(usernamePasswordToken);
-        result.setCode(ResultCode.SUCCESS);
+        result.setCode(ResultEnum.SUCCESS.getCode());
         result.setMessage("登录成功");
         return result;
     }
@@ -52,7 +53,7 @@ public class UserController {
         CommonResult result = new CommonResult();
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(loginRequest.getUsername(),loginRequest.getPassword());
         SecurityUtils.getSubject().login(usernamePasswordToken);
-        result.setCode(ResultCode.SUCCESS);
+        result.setCode(ResultEnum.SUCCESS.getCode());
         result.setMessage("登录成功");
         return result;
     }
