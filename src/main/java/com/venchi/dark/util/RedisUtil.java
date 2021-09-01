@@ -15,6 +15,7 @@ public class RedisUtil {
     private RedisTemplate<String,Object> redisTemplate;
 
     public Object get(String key) {
+        redisTemplate.opsForValue().get(key);
         return key == null ? null : redisTemplate.opsForValue().get(key);
     }
 

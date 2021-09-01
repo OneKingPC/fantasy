@@ -2,7 +2,6 @@ package com.venchi.dark.mapper;
 
 import com.venchi.dark.pojo.UserProfile;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

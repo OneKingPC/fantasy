@@ -1,5 +1,6 @@
 package com.venchi.dark.controller;
 
+import com.venchi.dark.annotation.Log;
 import com.venchi.dark.common.CommonResult;
 import com.venchi.dark.common.ResultEnum;
 import com.venchi.dark.service.RedisService;
@@ -26,6 +27,7 @@ public class RedisController {
 
     @ApiOperation(value = "测试get方法")
     @PostMapping(value = "/get")
+    @Log("RedisController.get")
     public CommonResult get(@RequestBody RedisRequest request){
         Object rsData = redisService.getValue(request.getKey());
         CommonResult commonResult = new CommonResult();

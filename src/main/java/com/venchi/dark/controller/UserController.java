@@ -1,5 +1,6 @@
 package com.venchi.dark.controller;
 
+import com.venchi.dark.annotation.Log;
 import com.venchi.dark.common.CommonResult;
 import com.venchi.dark.common.ResultCode;
 import com.venchi.dark.common.ResultEnum;
@@ -27,6 +28,7 @@ public class UserController {
 
     @ApiOperation(value = "查询用户列表")
     @PostMapping(value = "list")
+    @Log("UserController.list")
     public CommonResult list(){
         List<UserProfile> userProfiles = userProfileService.findAll();
         CommonResult result = new CommonResult();
@@ -38,6 +40,7 @@ public class UserController {
 
     @ApiOperation(value = "用户登录")
     @PostMapping(value = "login")
+    @Log("UserController.login")
     public CommonResult login(@RequestBody LoginRequest loginRequest){
         CommonResult result = new CommonResult();
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(loginRequest.getUsername(),loginRequest.getPassword());
